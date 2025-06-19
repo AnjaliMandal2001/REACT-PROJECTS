@@ -1,0 +1,168 @@
+/* ----- Global Styles ----- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ----- NAVIGATION ----- */
+nav {
+  width: 100%;
+  padding: 1rem 2rem;
+  background-color: rgb(35, 34, 34);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav h1 {
+  font-size: 1.5rem;
+}
+
+nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+nav li {
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* ----- LINKS ----- */
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a.active {
+  color: red;
+}
+
+/* ----- FOOTER ----- */
+.footer {
+  width: 100%;
+  padding: 1rem;
+  background-color: black;
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+/* ----- PAGE SECTIONS ----- */
+.home,
+.about,
+.contact {
+  padding: 2rem;
+  text-align: center;
+  min-height: 83vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.home {
+  background: #abd0f1;
+}
+
+.about {
+  background-color: #6af9bd;
+}
+
+.contact {
+  background-color: rgb(243, 204, 120);
+}
+
+/* ----- TEXT & ANIMATION ----- */
+.welcome-text,
+.fade-in {
+  animation: fadeInUp 1.2s ease-out forwards;
+  opacity: 0;
+  transform: translateY(20px);
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.home p,
+.about p,
+.contact p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* ----- RESPONSIVE MEDIA QUERIES ----- */
+
+/* Tablet */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-top: 0.5rem;
+  }
+
+  .footer {
+    font-size: 1rem;
+  }
+
+  .welcome-text,
+  .fade-in {
+    font-size: 1.5rem;
+  }
+
+  .home p,
+  .about p,
+  .contact p {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  nav {
+    padding: 1rem;
+  }
+
+  nav h1 {
+    font-size: 1.2rem;
+  }
+
+  nav li {
+    font-size: 0.9rem;
+  }
+
+  .footer {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+
+  .welcome-text,
+  .fade-in {
+    font-size: 1.2rem;
+  }
+
+  .home p,
+  .about p,
+  .contact p {
+    font-size: 0.95rem;
+  }
+}
